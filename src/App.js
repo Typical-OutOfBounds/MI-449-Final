@@ -1,4 +1,3 @@
-import logo from './logo2.png';
 import './App.css';
 import Home from "./routes/Home"
 import Classes from "./routes/Classes"
@@ -8,8 +7,6 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavContext from './contexts/NavContext';
 import React from 'react';
-import { useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
 import Feedback from './routes/Feedback';
 
 function App() {

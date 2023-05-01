@@ -32,7 +32,7 @@ const Feedback = () => {
         fetch('https://www.purgomalum.com/service/json?text=' + formData.comment)
         .then((response) => response.json())
         .then((data) => setData(data));
-        if (data.result != formData.comment) {
+        if (data.result !== formData.comment) {
             alert("Please do not use profanity");
         }
         console.log(data);

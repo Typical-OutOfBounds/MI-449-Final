@@ -1,4 +1,4 @@
-import { useNavigate, useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import "./Navbar.css"
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
@@ -7,11 +7,9 @@ import Container from 'react-bootstrap/Container'
 import { useContext } from 'react'
 import NavContext from '../contexts/NavContext'
 import React from 'react'
-import { useEffect } from 'react'
 
 const Navbar2 = () => {
     const { activePage, onNavClick} = useContext(NavContext);
-    const location = useLocation();
 
     const handleClick2 = (newPage) => {
         console.log(newPage);

@@ -13,7 +13,7 @@ Determined to get back on the right path, I dedicated this year towards learning
 The experience was scary and definitely a reality check, but when I look at the situation optimistically, I would have been complacent staying at my previous job, and the unfortunate situation pushed me to grow and advance my career. 
             </Container>
             <Container className="mt-5">
-                <Image src={campus} rounded fluid />
+                <Image src={campus} rounded fluid alt='msu campus'/>
             </Container>
             
         </div>

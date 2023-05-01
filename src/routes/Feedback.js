@@ -27,24 +27,48 @@ const Feedback = () => {
         setFormData({ ...formData, [name]: value });
       };
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
         // do something with formData, e.g. submit to server
-        fetch('https://www.purgomalum.com/service/json?text=' + formData.comment)
-        .then((response) => response.json())
-        .then((data) => setData(data));
-        if (data.result !== formData.comment) {
+        const profanityRespone = await fetch('https://www.purgomalum.com/service/json?text=' + formData.comment);
+        const json = await profanityRespone.json();
+        setData(json);
+        if (json.result !== formData.comment) {
             alert("Please do not use profanity");
         } else {
           async function inserData() {
             const {error} = await supabase
             .from('feedback')
             .insert({ email: formData.email, comment: formData.comment })
+            if (error) {
+              alert("There was an error submitting your feedback");
+            }
           }
           inserData();
           setFormData({ comment: '', email: '' });
         }
-        console.log("Here is the data", data);
+        console.log("Here is the data", json);
+
+        // fetch('https://www.purgomalum.com/service/json?text=' + formData.comment)
+        // .then((response) => response.json())
+        // .then((data) => setData(data))
+        // .then(() => {
+        // if (data.result !== formData.comment) {
+        //     alert("Please do not use profanity");
+        // } else {
+        //   async function inserData() {
+        //     const {error} = await supabase
+        //     .from('feedback')
+        //     .insert({ email: formData.email, comment: formData.comment })
+        //     if (error) {
+        //       alert("There was an error submitting your feedback");
+        //     }
+        //   }
+        //   inserData();
+        //   setFormData({ comment: '', email: '' });
+        // }
+        // console.log("Here is the data", data);
+        // });
       };
 
       function AllFeedback() {

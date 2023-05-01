@@ -39,7 +39,7 @@ const Home = () => {
                         Feel free to comment on the feedback page!
                     </Col>
                     <Col className="d-flex justify-content-center">
-                        <Image src={profile} fluid rounded />
+                        <Image src={profile} fluid rounded alt='A photo of me'/>
                     </Col>
                 </Row>
                 <Row className='mt-5'>
@@ -61,7 +61,7 @@ const Home = () => {
                                 <div className="col-md-4">
                                     <Card.Img
                                         src={html_logo}
-                                        alt="Placeholder"
+                                        alt="brackets"
                                         className="h-100"
                                     />
                                 </div>
@@ -87,7 +87,7 @@ const Home = () => {
                                 <div className="col-md-4">
                                 <Card.Img
                                     src={SVM}
-                                    alt="Placeholder"
+                                    alt="support vector machine"
                                     className="h-100"
                                 />
                                 </div>

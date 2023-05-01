@@ -8,7 +8,7 @@ import { Row, Col } from 'react-bootstrap';
 
 const Feedback = () => {
     const [formData, setFormData] = useState({ comment: '', email: '' });
-    const [data, setData] = useState([]);
+    // const [data, setData] = useState([]);
     const [comments, setComments] = useState([]);
 
     useEffect(() => {
@@ -32,7 +32,7 @@ const Feedback = () => {
         // do something with formData, e.g. submit to server
         const profanityRespone = await fetch('https://www.purgomalum.com/service/json?text=' + formData.comment);
         const json = await profanityRespone.json();
-        setData(json);
+        // setData(json);
         if (json.result !== formData.comment) {
             alert("Please do not use profanity");
         } else {

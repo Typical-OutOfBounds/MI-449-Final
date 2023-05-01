@@ -4,7 +4,9 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 
 const Classes = () => {
     return (
-        <Container>
+      <>
+        <h2 className="text-center m-3">Classes</h2>
+        <Container className="mb-5">
         <h2 className="mt-5">Fall 2022</h2>
       <Row>
         <Col>
@@ -140,6 +142,8 @@ const Classes = () => {
         </Col>
       </Row>
     </Container>
+      </>
+        
     );
 }
 

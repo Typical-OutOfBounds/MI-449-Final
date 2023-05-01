@@ -29,8 +29,7 @@ const Home = () => {
 
     return (
         <div className="home">
-            <h2>Home</h2>
-            <Container className="g-5">
+            <Container className="g-5 mt-5">
                 <Row className="g-5 fs-4">
                     <Col>
                         Learn about my senior year at Michigan State University and my preparation for life beyond college. <br/><br/>

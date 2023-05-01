@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 const Home = () => {
     return (
         <div className="personal">
-            <h2>Personal</h2>
+            <h2 className="text-center m-3">Personal</h2>
             <Container>
             I spent this year very differently than the last. School and learning has always been something that is very important to me, but last year, having a more “normal” year after COVID, I spent less time on my classes and a lot more time going out. My late nights and weekday drinking had taken a toll on my classes, and at the end of the year, I was stressed out and not happy with my grades.
 

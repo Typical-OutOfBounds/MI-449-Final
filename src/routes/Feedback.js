@@ -4,6 +4,7 @@ import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import { useEffect, useState } from 'react';
 import { supabase } from '../supabaseClient'
+import { Row, Col } from 'react-bootstrap';
 
 const Feedback = () => {
     const [formData, setFormData] = useState({ comment: '', email: '' });
@@ -34,34 +35,41 @@ const Feedback = () => {
         .then((data) => setData(data));
         if (data.result !== formData.comment) {
             alert("Please do not use profanity");
+        } else {
+          async function inserData() {
+            const {error} = await supabase
+            .from('feedback')
+            .insert({ email: formData.email, comment: formData.comment })
+          }
+          inserData();
+          setFormData({ comment: '', email: '' });
         }
-        console.log(data);
+        console.log("Here is the data", data);
       };
 
       function AllFeedback() {
         return (
-          <table className="book-table">
-            <tr>
-              <th>Email</th>
-              <th>comment</th>
-            </tr>
+          <Container>
           {
             comments == null ? <></> :
             comments.map(b => (
-              <tr>
-                <td>{b.email}</td>
-                <td>{b.comment}</td>
-              </tr>
+              <Row className="mt-3">
+                <Col>
+                {b.email} said: {b.comment}
+                </Col>
+              </Row>
             ))
           }
-          </table>
+
+          </Container>
+          
         )
       }
       
 
     return (
         <div>
-            <h2>Feedback</h2>
+            <h2 className="text-center m-3">Feedback</h2>
             <Container>
             <Card>
             <Form className="m-3" onSubmit={handleSubmit}>

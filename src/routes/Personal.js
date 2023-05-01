@@ -1,4 +1,6 @@
 import { Container } from "react-bootstrap";
+import campus from "../images/msu.jpg"
+import Image from 'react-bootstrap/Image'
 
 const Home = () => {
     return (
@@ -10,6 +12,10 @@ const Home = () => {
 Determined to get back on the right path, I dedicated this year towards learning and doing well in my classes. I was ready finish my undergraduate career strong and start my job, but then an unexpected layoff hit, and now the workplace I had been interning at for two summers could not keep me and many others. I had to get back into job search mode quick. Thankfully with a subpar resume and just a little bit of practicing my algorithm skills, I was able to get an offer for a great job in Chicago. 
 The experience was scary and definitely a reality check, but when I look at the situation optimistically, I would have been complacent staying at my previous job, and the unfortunate situation pushed me to grow and advance my career. 
             </Container>
+            <Container className="mt-5">
+                <Image src={campus} rounded fluid />
+            </Container>
+            
         </div>
     );
 }

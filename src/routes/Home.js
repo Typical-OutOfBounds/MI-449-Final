@@ -2,7 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
-import logo from '../logo2.png';
+import profile from '../images/profile.png';
 import "./Home.css"
 import { Card } from "react-bootstrap";
 import html_logo from '../images/jackson-sophat-_t-l5FFH8VA-unsplash.jpg'
@@ -32,12 +32,14 @@ const Home = () => {
             <Container className="g-5 mt-5">
                 <Row className="g-5 fs-4">
                     <Col>
+                        Hi, I'm Aidan! <br/><br/>
                         Learn about my senior year at Michigan State University and my preparation for life beyond college. <br/><br/>
                         Here you will find information about the classes I took and what I have learned. <br/><br/>
-                        I’ll even throw in a few words about my job search for no extra charge. 
+                        I’ll even throw in a few words about my job search for no extra charge. <br/><br/>
+                        Feel free to comment on the feedback page!
                     </Col>
                     <Col className="d-flex justify-content-center">
-                        <Image src={logo} rounded />
+                        <Image src={profile} fluid rounded />
                     </Col>
                 </Row>
                 <Row className='mt-5'>
